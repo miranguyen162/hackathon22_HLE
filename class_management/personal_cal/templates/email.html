@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Email</title>
+  </head>
+
+  <body>
+    
+    <form class="form-contact contact_form container" action="{% url 'calendar/email' %}" method="post" id="contactForm"
+                novalidate="novalidate">
+    {% csrf_token %}
+      <label>Gửi nhắc nhở lịch học</label><br>
+      <button type="submit" class="btn btn-outline-success red">Gửi qua email</button>
+    </form>
+  </body>
+
+
+  
