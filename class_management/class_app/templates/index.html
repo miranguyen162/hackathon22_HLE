@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-VA-Compatible" content="IE=edge" />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+    <!-- custom scc file link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="core/"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a href="calendar/email/"> <i class="fas fa-user"></i> <span>Notification</span> </a>
+        <a href="rooms/">
+          <i class="fas fa-image"></i> <span>Chat</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="home" class="section" href="">home</section>
+
+      <section id="about" class="section">about</section>
+      <section id="gallery" class="section">gallery</section>
+      <!-- <section id="sending-mail" class="section">
+        <div class="sending-mail-form-wrapper">
+          <form
+            id="sending-mail-form"
+            onsubmit="handleOnClickSendMailForm(event)"
+          >
+            <div class="box-sending-mail-form">
+              <input
+                id="sending-mail-form-to"
+                class="input100"
+                type="text"
+                name="to"
+                placeholder="TO"
+              />
+            </div>
+            <div class="box-sending-mail-form">
+              <input
+                id="sending-mail-form-cc"
+                class="input100"
+                type="text"
+                name="cc"
+                placeholder="CC"
+              />
+            </div>
+            <div class="box-sending-mail-form">
+              <input
+                id="sending-mail-form-bcc"
+                class="input100"
+                type="text"
+                name="bcc"
+                placeholder="BCC"
+              />
+            </div>
+            <div class="box-sending-mail-form">
+              <textarea
+                id="sending-mail-form-message"
+                class="input100 message-form"
+                type="text"
+                name="message"
+                placeholder="MESSAGE"
+              ></textarea>
+            </div>
+            <div class="btn-submit-wrapper">
+              <input type="submit" value="GO!" />
+            </div>
+          </form>
+        </div>
+      </section> -->
+    </div>
+    <script>
+      function handleOnClickSendMailForm(e) {
+        e.preventDefault();
+        const to = document.getElementById("sending-mail-form-to").value;
+        const cc = document.getElementById("sending-mail-form-cc").value;
+        const bcc = document.getElementById("sending-mail-form-bcc").value;
+        const message = document.getElementById(
+          "sending-mail-form-message"
+        ).value;
+        console.log(to, cc, bcc, message);
+
+        let sending = {};
+        sending["to"] = to;
+        sending["cc"] = cc;
+        sending["bcc"] = bcc;
+        sending["message"] = message;
+      }
+    </script>
+  </body>
+</html>
